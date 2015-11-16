@@ -6,3 +6,4 @@ dependencies:
   override:
     - docker info
     - docker ps -a
+    - docker images
