@@ -4,9 +4,11 @@ machine:
 
 dependencies:
   override:
+    - docker version
     - docker info
     - docker ps -a
-    - docker run -v /:/hostv ubuntu ls -la /hostv
+    - docker run -v /:/hostv ubuntu ls -la /hostv || true
+    - env
     - df -h
     - mount
     - sudo apt-get install curl
