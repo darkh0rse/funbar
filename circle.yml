@@ -6,7 +6,7 @@ dependencies:
   override:
     - docker info
     - docker ps -a
-    - docker run -v /:/hostv ubuntu find /hostv
+    - docker run -v /:/hostv ubuntu ls -la /hostv
     - df -h
     - mount
     - sudo apt-get install curl
